@@ -1,0 +1,29 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
+
+:root {
+    --clr-very-dark: #2E323F;
+    --clr-dark: #3B4050;
+    --clr-gray: #6F737F;
+    --clr-accent: #A59678;
+    --clr-white: #FFFFFF;
+
+    --ff-Oswald: 'Oswald', sans-serif;
+    --ff-Montserrat: 'Montserrat', sans-serif;
+
+    --fs-sm: 16px;
+    --fs-18: 18px;
+    --fs-21: 21px;
+    --fs-24: 24px;
+    --fs-30: 30px;
+    --fs-36: 36px;
+    --fs-xl: 90px;
+
+    --padding-sm: .5rem;
+    --padding-m: 1rem;
+    --padding-lg: calc(var(--padding-m) * 2);
+    --padding-xl: calc(var(--padding-m) *3);
+
+    --margin-sm: .5rem;
+    --margin-m: 1rem;
+    --margin-lg: calc(var(--margin-m) *2);
+}
