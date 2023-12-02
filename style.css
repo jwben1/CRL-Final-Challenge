@@ -173,3 +173,31 @@ body {
 .extra-padding {
     padding: 4.2rem 1rem 1rem;
 }
+.footer-surface {
+  background-color: var(--clr-dark);
+  color: var(--clr-gray);
+  font-family: var(--ff-Montserrat);
+  font-size: var(--fs-sm);
+}
+
+.footer-surface h2,
+.footer-surface h3 {
+  font-family: var(--ff-Oswald);
+}
+
+.footer-surface h2 {
+  font-size: var(--fs-24);
+  color: var(--clr-white);
+  margin-bottom: var(--margin-m);
+  text-align: center;
+}
+
+.footer-surface h3 {
+  font-size: var(--fs-21);
+  color: var(--clr-accent);
+}
+
+.footer-surface ul {
+  list-style: none;
+  padding: 0;
+}
