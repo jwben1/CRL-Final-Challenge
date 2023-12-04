@@ -92,13 +92,19 @@ body {
     font-size: var(--fs-18);
 }
 header {
+ font-family: var(--ff-Oswald); 
   background-color: var(--clr-very-dark);
-  padding: 1.5em 0;
+  padding: 1.2em 0;
 }
 header a {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--clr-white);
+}
+.nav__btn {
+  background-color: var(--clr-accent);
+  padding: .5em .8em;
+  border-radius: 50px;
 }
 header ul,
 .footer-surface ul {
