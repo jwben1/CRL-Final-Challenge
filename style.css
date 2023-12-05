@@ -101,10 +101,76 @@ header a {
   text-decoration: none;
   color: var(--clr-white);
 }
-.nav__btn {
+header .row {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+/* Hamburger Menu */
+.nav__toggle {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+}
+.hamburger, .hamburger::before,
+.hamburger::after{
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: var(--clr-very-dark);
+}
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+.hamburger::before {
+  transform: translateY(-6px);
+}
+.hamburger::after {
+  transform: translateY(3px);
+}
+/* Nav Visibility */
+.nav {
+visibility: hidden;
+height: 0;
+position: absolute;
+}
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative; 
+}
+/*  */
+header .nav {
+  width: 100%;
+}
+.nav__link--btn {
   background-color: var(--clr-accent);
   padding: .5em .8em;
   border-radius: 50px;
+}
+.intro a:is(:hover, :focus),
+.nav a:is(:hover, :focus),
+header img:is(:hover, :focus),
+.nav__toggle:is(:hover, :focus) {
+  opacity: .75;
+}
+.intro a:active,
+.nav a:active,
+header img:active,
+.nav__toggle:active {
+  opacity: .65;
 }
 header ul,
 .footer-surface ul {
@@ -123,6 +189,7 @@ header ul,
     width: 85%;
     max-width: 75rem;
     margin: 0 auto;
+    position: relative;
 }
 .intro h1 {
     font-size: var(--fs-xl);
@@ -197,6 +264,8 @@ header ul,
   color: var(--clr-sub-white);
   font-family: var(--ff-Montserrat);
   font-size: var(--fs-sm);
+  text-align: center;
+  padding: var(--padding-xl) 0;
 }
 
 .footer-surface h2,
@@ -218,12 +287,26 @@ header ul,
 }
 
 @media (min-width: 43.75em) {
+  .nav__toggle {
+    visibility: hidden;
+  } 
+  .nav {
+  visibility: visible;
+  height: auto;
+  position: relative; 
+  }
   .footer-surface h2 {
     --fs-24: 2.5rem;
   }
   .suggestion__list {
     display: flex;
     gap: 1rem;
+  }
+  header .row {
+    flex-direction: row;
+  }
+  header .nav {
+    justify-content: flex-end;
   }
 }
 
@@ -234,9 +317,6 @@ header ul,
   .row {
     display: flex;
     gap: 2rem;
-  }
-  .nav-row {
-    justify-content: space-between;
   }
   .intro .row {
     gap: 3rem;
@@ -251,11 +331,13 @@ header ul,
     display: block;
     padding-left: 6rem;
   }
+  .footer-surface { 
+    text-align: left;
+  }
   .footer-surface .row{
     justify-content: space-between;
   }
   .footer-about {
     width: 30%;
   }
-
 }
